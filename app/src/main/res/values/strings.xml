@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">BOOKLAND</string>
+    <string name="name">Home</string>
+    <string name="adventure">ADVENTURE</string>
+    <string name="novel">NOVEL</string>
+    <string name="education">EDUCATION</string>
+    <string name="biography">BIOGRAPHY</string>
+    <string name="children">CHILDREN</string>
+    <string name="magazines">MAGAZINES</string>
+
+    <string name="adventure_book">ADVENTURE</string>
+    <string name="search">Search</string>
+    <string name="button1_view">VIEW</string>
+    <string name="button2_view">VIEW</string>
+    <string name="button3_view">VIEW</string>
+    <string name="button4_view">VIEW</string>
+    <string name="button5_view">VIEW</string>
+    <string name="button6_view">VIEW</string>
+
+    <string name="book_name">Book Name</string>
+    <string name="price">Book Price</string>
+    <string name="description">Description</string>
+    <string name="bookName">The Adentures Of Robin Hood</string>
+    <string name="book_price">Rs.850/=</string>
+    <string name="book_description">Robin Hood is a legendary heroic outlaw originally depicted in English
+                         folklore and subsequently featured in literature and film. According to
+                        legend, he was a highly skilled archer and swordsman.</string>
+    <string name="button_buy">Buy Now</string>
+    <string name="button_cart">Add To Cart</string>
+
+    <string name="Add_New_Book"> + Add New Book</string>
+    <string name="View_adventure">  Adventure</string>
+    <string name="View_Novel"> Novel</string>
+    <string name="Edit1">EDIT</string>
+    <string name="Edit2">EDIT</string>
+    <string name="Edit3">EDIT</string>
+    <string name="Delete1">DELETE</string>
+    <string name="Delete2">DELETE</string>
+    <string name="Delete3">DELETE</string>
+
+    <string name="Add_book">Add Book</string>
+    <string name="new_book_name">Book Name</string>
+    <string name="new_book_price">Price</string>
+    <string name="new_book_description">Description</string>
+    <string name="new_book_Category">Category</string>
+    <string name="Add_Image">Add Image</string>
+    <string name="Save">Save</string>
+
+    <string name="Edit_book">Edit Book</string>
+    <string name="edit_book_name">LORD OF THE RING</string>
+    <string name="edit_book_price">Rs.1500/=</string>
+    <string name="edit_book_description">Description</string>
+    <string name="edit_book_Category">Adventure</string>
+    <string name="edit_Image">Edit Image</string>
+    <string name="edit">Save</string>
+
+    <string-array name="category_array">
+        <item>Category</item>
+        <item>ADVRNTURE</item>
+        <item>NOVEL</item>
+        <item>MAGAZINES</item>
+        <item>CHILDREN</item>
+        <item>EDUCATION</item>
+        <item>BIOGRAPHY</item>
+
+    </string-array>
+</resources>
+

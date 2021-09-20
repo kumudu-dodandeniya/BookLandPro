@@ -1,14 +1,14 @@
 package com.example.mobileapp;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public class cardCRUD extends AppCompatActivity {
+import android.os.Bundle;
+
+public class AdminCategory extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_card_crud);
+        setContentView(R.layout.activity_admin_category);
     }
 }

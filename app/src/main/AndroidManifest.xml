@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileApp">
-        <activity android:name=".AdminCategory"></activity>
+        <activity android:name=".AdminCategory" />
         <activity android:name=".Edit_book" />
         <activity android:name=".Add_Book" />
         <activity android:name=".View_Books" />

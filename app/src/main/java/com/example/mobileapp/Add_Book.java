@@ -3,8 +3,13 @@ package com.example.mobileapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
 
 public class Add_Book extends AppCompatActivity {
+
+    private String CategoryName;
+    private Button AddNewBookButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

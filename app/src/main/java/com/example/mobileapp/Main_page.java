@@ -23,7 +23,7 @@ public class Main_page extends AppCompatActivity {
            @Override
            public void onClick(View v) {
 
-               Intent intent = new Intent(Main_page.this,LoginActivity.class);
+               Intent intent = new Intent(Main_page.this,UserLogin.class);
                startActivity(intent);
            }
        });

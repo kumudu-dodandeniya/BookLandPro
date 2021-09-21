@@ -53,6 +53,20 @@
     <string name="edit_book_Category">Adventure</string>
     <string name="edit_Image">Edit Image</string>
     <string name="edit">Save</string>
+    <string name="theme_name">KEEP READING ,ENJOY THE MOMENT</string>
+    <string name="select_login">Already have an Account ? LOGIN</string>
+    <string name="select_join_now">Join Now</string>
+    <string name="input_username">Username</string>
+    <string name="input_password">Password</string>
+    <string name="remeber_me">remember me</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="login_btn">LOGIN</string>
+    <string name="admin">I am an Admin?</string>
+    <string name="not_admin">I am not an Admin</string>
+    <string name="reg_username">Username</string>
+    <string name="reg_password">Password</string>
+    <string name="reg_phone">Phone Number</string>
+    <string name="create_account">Create Account</string>
 
     <string-array name="category_array">
         <item>Category</item>

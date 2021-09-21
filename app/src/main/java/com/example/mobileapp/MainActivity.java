@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         adventure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,BookView.class);
+                Intent intent = new Intent(MainActivity.this,AdminCategory.class);
                 startActivity(intent);
             }
         });

@@ -6,7 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".AdminCategory">
 
-
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dashbord" />
 
     <TextView
         android:id="@+id/category"
@@ -36,7 +43,7 @@
         android:layout_marginTop="50dp">
 
         <ImageView
-            android:id="@+id/adventure"
+            android:id="@+id/translation"
             android:layout_width="219dp"
             android:layout_height="100dp"
             android:src="@drawable/adventure"></ImageView>
@@ -62,7 +69,7 @@
         android:layout_marginLeft="70dp"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="-35dp"
-        android:text="ADVENTURE"
+        android:text="TRANSLATION"
         android:textColor="@color/black"
         android:textSize="18sp" />
 

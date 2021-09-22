@@ -14,22 +14,30 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.HashMap;
 
 public class Add_Book extends AppCompatActivity {
 
-    private String CategoryName , Description, Price , Pname , saveCurrentDate, getSaveCurrentTime;
+    private String CategoryName , Description, Price , Pname , saveCurrentDate, saveCurrentTime;
     private Button AddNewBookButton;
     private ImageView InputBookImage;
     private EditText InputBookName, InputBookDescription, InputBookPrice;
     private static final int GalleryPick = 1;
     private Uri ImageUri;
-    private String bookRandomKey;
+    private String bookRandomKey , downloadImageUrl  ;
     private StorageReference bookImagesRef;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +45,7 @@ public class Add_Book extends AppCompatActivity {
         setContentView(R.layout.activity_add_book);
 
         CategoryName = getIntent().getExtras().get("category").toString();
-       bookImagesRef = FirebaseStorage.getInstance().getReference().child("Book Image")
+       bookImagesRef = FirebaseStorage.getInstance().getReference().child("Book Image");
 
         AddNewBookButton = (Button) findViewById(R.id.btn_add_book);
         InputBookImage = (ImageView) findViewById(R.id.book_image);
@@ -124,23 +132,68 @@ public class Add_Book extends AppCompatActivity {
         saveCurrentDate = currentDate.format(calendar.getTime());
 
         SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
-        getSaveCurrentTime = currentTime.format(calendar.getTime());
+        saveCurrentTime = currentTime.format(calendar.getTime());
 
-        bookRandomKey = saveCurrentDate + getSaveCurrentTime;
+        bookRandomKey = saveCurrentDate + saveCurrentTime;
 
         StorageReference  filePath = bookImagesRef.child(ImageUri.getLastPathSegment() + bookRandomKey + ".jpg");
 
-        final  UploadTask uploadTask = filePath.putFile(ImageUri);
+        final UploadTask uploadTask = filePath.putFile(ImageUri);
 
-        uploadTask.addOnFailureListener(new OnFailureListener()){
+        uploadTask.addOnFailureListener(new OnFailureListener() {
             @Override
-            public void onFailure(@NonNull Exception e)
-            {
+            public void onFailure(@NonNull Exception e) {
+
                 String message = e.toString();
+                Toast.makeText(Add_Book.this, "Error:" + message, Toast.LENGTH_SHORT).show();
+            }
+        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                Toast.makeText(Add_Book.this, "Book Image upload successfully..", Toast.LENGTH_SHORT).show();
+
+                Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
+                    @Override
+                    public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
+
+                        if(task.isSuccessful()){
+                            throw task.getException();
+                        }
+                        downloadImageUrl = filePath.getDownloadUrl().toString();
+                        return filePath.getDownloadUrl();
+                    }
+                }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Uri> task) {
+
+                        if(task.isSuccessful()){
+                            Toast.makeText(Add_Book.this, "Got The Book Image Successfully..", Toast.LENGTH_SHORT).show();
+
+                            SaveBookInfoToDatabase();
+                        }
+
+                    }
+                });
+
 
             }
-        }
-
+        });
 
     }
+
+    private void SaveBookInfoToDatabase() {
+        HashMap<String,Object> bookMap = new HashMap<>();
+        bookMap.put("pid",bookRandomKey);
+        bookMap.put("date",saveCurrentDate);
+        bookMap.put("time",saveCurrentTime);
+        bookMap.put("description",Description);
+        bookMap.put("image",downloadImageUrl);
+        bookMap.put("category",CategoryName);
+        bookMap.put("price",Price);
+        bookMap.put("pname",Pname);
+
+    }
+
+
 }

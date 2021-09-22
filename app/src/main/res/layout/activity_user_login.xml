@@ -18,7 +18,7 @@
         />
 
     <EditText
-        android:id="@+id/reg_username"
+        android:id="@+id/phonenum"
         android:layout_width="397dp"
         android:layout_height="57dp"
         android:layout_below="@+id/logo"
@@ -33,11 +33,11 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/reg_password"
+        android:id="@+id/password"
         android:layout_width="397dp"
         android:layout_height="57dp"
         android:inputType="textPassword"
-        android:layout_below="@+id/reg_username"
+        android:layout_below="@+id/phonenum"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="25dp"
         android:layout_marginRight="15dp"
@@ -52,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@id/reg_password"
+        android:layout_below="@id/password"
         android:layout_marginTop="5dp"
         >
 

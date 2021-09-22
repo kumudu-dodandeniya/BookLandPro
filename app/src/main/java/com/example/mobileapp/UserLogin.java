@@ -9,28 +9,23 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mobileapp.Model.Users;
-import com.example.mobileapp.Prevalent.Prevalent;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import io.paperdb.Paper;
-
 public class UserLogin extends AppCompatActivity {
     private EditText InputPhoneNumber,InputPassword;
     private Button LoginButton;
     private ProgressDialog loadingBar;
     private String parentDbname ="Users";
-    private CheckBox chkBoxRemeberMe;
     private TextView AdminLink, NotAdminLink;
 
     @Override
@@ -44,9 +39,6 @@ public class UserLogin extends AppCompatActivity {
         AdminLink = (TextView) findViewById(R.id.admin);
         NotAdminLink = (TextView) findViewById(R.id.not_admin);
         loadingBar =new ProgressDialog(this);
-
-        chkBoxRemeberMe =(CheckBox) findViewById(R.id.remember_me) ;
-        Paper.init(this);
 
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,12 +94,7 @@ public class UserLogin extends AppCompatActivity {
         }
     }
 
-    private void AllowAccessToTheAccount( String phonenumber, String password) {
-
-        if(chkBoxRemeberMe.isChecked()){
-            Paper.book().write(Prevalent.UserPhoneKey,phonenumber);
-            Paper.book().write(Prevalent.UserPasswordKey,password);
-        }
+    private void AllowAccessToTheAccount(String phonenumber, String password) {
 
         final DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();

@@ -9,37 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileApp">
-        <activity
-            android:name=".HomeMainActivity"
-            android:exported="true">
+        <activity android:name=".Edit_book"></activity>
+        <activity android:name=".Add_Book" />
+        <activity android:name=".View_Books" />
+        <activity android:name=".BookView" />
+        <activity android:name=".Home" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Edit_book" />
-        <activity android:name=".Add_Book" />
-        <activity android:name=".View_Books" />
-        <activity android:name=".BookView" />
-        <activity android:name=".Home" />
-        <activity android:name=".MainActivity" />
-        <activity
-            android:name=".CardOrders"
-            android:exported="true"
-            android:parentActivityName=".cartOrder" />
-        <activity
-            android:name=".cartOrder"
-            android:exported="true"
-            android:parentActivityName=".orders" />
-        <activity
-            android:name=".CashOnDelivery_Details"
-            android:exported="true"
-            android:parentActivityName=".orders" />
-        <activity
-            android:name=".orders"
-            android:exported="true"
-            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

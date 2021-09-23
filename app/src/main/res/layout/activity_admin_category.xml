@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashbord"
+    tools:context=".AdminCategory">
+
+
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Add New Book"
+        android:textAlignment="center"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_horizontal" />
+
+
+    <LinearLayout
+        android:id="@+id/liner_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below = "@+id/category"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal = "true"
+        android:gravity="center"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/translation"
+            android:layout_width="219dp"
+            android:layout_height="100dp"
+            android:src="@drawable/adventure"></ImageView>
+
+
+
+        <ImageView
+            android:id="@+id/navel"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/adventure"></ImageView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/liner_category"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="-35dp"
+        android:text="TRANSLATION"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/liner_category"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="276dp"
+        android:layout_marginLeft="276dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="-38dp"
+        android:text="NAVEL"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+
+    <LinearLayout
+        android:id="@+id/liner1_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below = "@+id/liner_category"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal = "true"
+        android:gravity="center"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/children"
+            android:layout_width="219dp"
+            android:layout_height="100dp"
+            android:src="@drawable/children"></ImageView>
+
+
+
+        <ImageView
+            android:id="@+id/education"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/children"></ImageView>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/liner1_category"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="-35dp"
+        android:text="CHILDREN"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/liner1_category"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="276dp"
+        android:layout_marginLeft="276dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="-38dp"
+        android:text="EDUCATION"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+
+    <LinearLayout
+        android:id="@+id/liner2_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below = "@+id/liner1_category"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal = "true"
+        android:gravity="center"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/biography"
+            android:layout_width="219dp"
+            android:layout_height="100dp"
+            android:src="@drawable/biography"></ImageView>
+
+
+
+        <ImageView
+            android:id="@+id/magazine"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/children"></ImageView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/liner2_category"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="-35dp"
+        android:text="BIOGRAPTH"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/liner2_category"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="276dp"
+        android:layout_marginLeft="276dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="-38dp"
+        android:text="MAGAZINE"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+
+
+
+</RelativeLayout>

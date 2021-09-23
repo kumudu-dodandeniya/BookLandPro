@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/image_15"
+    tools:context=".CashOnDelivery_Details">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="172dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="439dp" />
+
+    <TextView
+        android:id="@+id/add"
+        android:layout_width="236dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/add"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="517dp" />
+
+    <TextView
+        android:id="@+id/details1"
+        android:layout_width="374dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/details1"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="149dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/address"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="517dp" />
+
+    <TextView
+        android:id="@+id/Quantity"
+        android:layout_width="168dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/Quantity"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="593dp" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="169dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/phone"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="672dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="199dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/textView13"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="439dp" />
+
+    <TextView
+        android:id="@+id/mail"
+        android:layout_width="217dp"
+        android:layout_height="32dp"
+        android:text="@string/mail"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="190dp"
+        tools:layout_editor_absoluteY="675dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="158dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/price"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="743dp" />
+
+    <TextView
+        android:id="@+id/pp"
+        android:layout_width="202dp"
+        android:layout_height="38dp"
+        android:text="@string/pp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="190dp"
+        tools:layout_editor_absoluteY="748dp" />
+
+    <TextView
+        android:id="@+id/qtty"
+        android:layout_width="196dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/qtty"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Quantity"
+        tools:layout_editor_absoluteY="598dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="303dp"
+        android:layout_height="243dp"
+        app:srcCompat="@drawable/image_14"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="128dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

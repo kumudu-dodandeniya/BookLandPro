@@ -40,7 +40,7 @@
             android:id="@+id/translation"
             android:layout_width="219dp"
             android:layout_height="100dp"
-            android:src="@drawable/adventure"></ImageView>
+            android:src="@drawable/children"></ImageView>
 
 
 
@@ -48,7 +48,7 @@
             android:id="@+id/navel"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:src="@drawable/adventure"></ImageView>
+            android:src="@drawable/children"></ImageView>
 
 
     </LinearLayout>
@@ -153,7 +153,7 @@
             android:id="@+id/biography"
             android:layout_width="219dp"
             android:layout_height="100dp"
-            android:src="@drawable/biography"></ImageView>
+            android:src="@drawable/children"></ImageView>
 
 
 

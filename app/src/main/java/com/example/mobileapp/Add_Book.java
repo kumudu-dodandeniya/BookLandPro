@@ -1,9 +1,11 @@
 package com.example.mobileapp;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -19,6 +21,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -37,6 +41,9 @@ public class Add_Book extends AppCompatActivity {
     private Uri ImageUri;
     private String bookRandomKey , downloadImageUrl  ;
     private StorageReference bookImagesRef;
+    private DatabaseReference BooksRef;
+    private ProgressDialog loadingBar;
+
 
 
     @Override
@@ -46,12 +53,13 @@ public class Add_Book extends AppCompatActivity {
 
         CategoryName = getIntent().getExtras().get("category").toString();
        bookImagesRef = FirebaseStorage.getInstance().getReference().child("Book Image");
-
+        BooksRef = FirebaseDatabase.getInstance().getReference().child("Books ");
         AddNewBookButton = (Button) findViewById(R.id.btn_add_book);
         InputBookImage = (ImageView) findViewById(R.id.book_image);
         InputBookName = (EditText) findViewById(R.id.Book_Name);
         InputBookDescription = (EditText) findViewById(R.id.Book_Description);
         InputBookPrice = (EditText) findViewById(R.id.Book_Price);
+        loadingBar =new ProgressDialog(this);
 
 
         InputBookImage .setOnClickListener(new View.OnClickListener(){
@@ -72,12 +80,12 @@ public class Add_Book extends AppCompatActivity {
 
     }
 
-    private void openGallery(){
-
+    private void openGallery() {
         Intent galleryIntent = new Intent();
         galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
         galleryIntent.setType("image/*");
-        startActivityForResult(galleryIntent, GalleryPick);
+        startActivityForResult(galleryIntent,GalleryPick);
+
     }
 
 
@@ -126,6 +134,11 @@ public class Add_Book extends AppCompatActivity {
 
     private void StoreBookInformation() {
 
+        loadingBar.setTitle("Add New Book");
+        loadingBar.setMessage("Please wait,while we are adding new book");
+        loadingBar.setCanceledOnTouchOutside(false);
+        loadingBar.show();
+
         Calendar calendar = Calendar.getInstance();
 
         SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyy");
@@ -146,6 +159,7 @@ public class Add_Book extends AppCompatActivity {
 
                 String message = e.toString();
                 Toast.makeText(Add_Book.this, "Error:" + message, Toast.LENGTH_SHORT).show();
+                loadingBar.dismiss();
             }
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
@@ -168,6 +182,7 @@ public class Add_Book extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Uri> task) {
 
                         if(task.isSuccessful()){
+                            downloadImageUrl = task.getResult().toString();
                             Toast.makeText(Add_Book.this, "Got The Book Image Successfully..", Toast.LENGTH_SHORT).show();
 
                             SaveBookInfoToDatabase();
@@ -192,6 +207,25 @@ public class Add_Book extends AppCompatActivity {
         bookMap.put("category",CategoryName);
         bookMap.put("price",Price);
         bookMap.put("pname",Pname);
+
+        BooksRef.child(bookRandomKey).updateChildren(bookMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull  Task<Void> task) {
+
+                if(task.isSuccessful()){
+                    Intent intent = new Intent(Add_Book.this,AdminCategory.class);
+                    startActivity(intent);
+
+                    loadingBar.dismiss();
+                    Toast.makeText(Add_Book.this, " New Book Is Added Successfully..", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    loadingBar.dismiss();
+                    String message = task.getException().toString();
+                    Toast.makeText(Add_Book.this, " Error" + message, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
     }
 

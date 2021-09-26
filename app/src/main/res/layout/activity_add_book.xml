@@ -1,87 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/dashbord"
-    tools:context=".Add_Book">
+    android:orientation="vertical"
+    android:background="@drawable/dashbord">
 
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Add New Book"
+        android:background="@color/purple_500"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textColor="#FFF"/>
 
-    <ImageView
-        android:id="@+id/book_image"
-        android:layout_width="350dp"
-        android:layout_height="200dp"
-        android:cropToPadding="false"
-        android:scaleType="centerCrop"
-        android:src="@drawable/adventure"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"/>
-
-
-    <EditText
-        android:id="@+id/Book_Name"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/book_image"
-        android:padding="20dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginRight="45dp"
-        android:inputType="textMultiLine"
-        android:hint="Book Name"
-        android:background="@drawable/button2"
-        android:textStyle="bold"
-        android:textColorHint="@color/black"
+        android:text="Name"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="25dp"
+        android:gravity="center"
         />
 
     <EditText
-        android:id="@+id/Book_Description"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button2"
+        android:gravity="center"
+        android:id="@+id/Book_Name"/>
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Book_Name"
-        android:padding="20dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="45dp"
-        android:inputType="textMultiLine"
-        android:hint="Book Description"
-        android:background="@drawable/button2"
-        android:textStyle="bold"
-        android:textColorHint="@color/black"
+        android:text="Description"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="25dp"
+        android:gravity="center"
         />
 
     <EditText
-        android:id="@+id/Book_Price"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button2"
+        android:gravity="center"
+        android:id="@+id/Book_Description"/>
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Book_Description"
-        android:padding="20dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="45dp"
-        android:inputType="textMultiLine"
-        android:hint="Book Price"
-        android:textStyle="bold"
-        android:textColorHint="@color/black"
-        android:background="@drawable/button2"
-
+        android:text="Price"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="25dp"
+        android:gravity="center"
         />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button2"
+        android:gravity="center"
+        android:id="@+id/Book_Price"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book Image"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="25dp"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button2"
+        android:gravity="center"
+        android:id="@+id/txtImageUrl"
+        android:layout_marginBottom="10dp"/>
 
     <Button
-        android:id="@+id/btn_add_book"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Book_Price"
-        android:padding="17dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="20dp"
-        android:textSize="18sp"
-       android:textAllCaps="false"
-        android:layout_marginRight="45dp"
-        android:text="Add Book"
-        android:textColor="@android:color/white"/>
+        android:text="Save"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp"
+        android:textSize="21dp"
+        android:textAllCaps="false"
+        android:background="@drawable/buttons"
+        android:gravity="center"
+        android:id="@+id/btnAdd"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp"
+        android:textSize="21dp"
+        android:textAllCaps="false"
+        android:background="@drawable/button2"
+        android:gravity="center"
+        android:id="@+id/btnBack"/>
 
 
-</RelativeLayout>
+
+
+
+
+
+</LinearLayout>

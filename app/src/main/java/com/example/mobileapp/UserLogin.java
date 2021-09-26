@@ -121,14 +121,14 @@ public class UserLogin extends AppCompatActivity {
                     if(usersData.getPhonenumber().equals(phonenumber)){
 
                         if(usersData.getPassword().equals(password)){
-                            if(parentDbname.equals("Admins")){
+                            if(parentDbname.equals("Users")){
                                 Toast.makeText(UserLogin.this, "Welcome Admin, you are logged in Successfully", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
-                                Intent intent = new Intent(UserLogin.this,HomeActivity.class);
+                                Intent intent = new Intent(UserLogin.this,Home.class);
                                 startActivity(intent);
                             }
-                            else if(parentDbname.equals("Users")){
+                            else if(parentDbname.equals("Admins")){
                                 Toast.makeText(UserLogin.this, "logged in Successfully", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 

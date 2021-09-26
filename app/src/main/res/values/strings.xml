@@ -22,9 +22,7 @@
     <string name="description">Description</string>
     <string name="bookName">The Adentures Of Robin Hood</string>
     <string name="book_price">Rs.850/=</string>
-    <string name="book_description">Robin Hood is a legendary heroic outlaw originally depicted in English
-                         folklore and subsequently featured in literature and film. According to
-                        legend, he was a highly skilled archer and swordsman.</string>
+    <string name="book_description"></string>
     <string name="button_buy">Buy Now</string>
     <string name="button_cart">Add To Cart</string>
 

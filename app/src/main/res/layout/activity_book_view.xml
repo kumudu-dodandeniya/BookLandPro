@@ -21,99 +21,100 @@
         app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/index1" />
+        android:src="@drawable/adventure"/>
 
     <TextView
         android:id="@+id/book_name"
         android:layout_width="128dp"
         android:layout_height="25dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="44dp"
         android:text="@string/book_name"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        android:textColor="@color/black"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-    <TextView
+    <EditText
         android:id="@+id/txt_book_name"
         android:layout_width="189dp"
         android:layout_height="25dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
         android:text="@string/bookName"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toEndOf="@+id/book_name"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        android:textColor="@color/black"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/book_price"
         android:layout_width="128dp"
         android:layout_height="25dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="52dp"
         android:text="@string/price"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/book_name"
-        android:textColor="@color/black"/>
+        app:layout_constraintTop_toBottomOf="@+id/book_name" />
 
-    <TextView
+    <EditText
         android:id="@+id/txt_price"
         android:layout_width="189dp"
         android:layout_height="25dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
         android:text="@string/book_price"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toEndOf="@+id/book_name"
-        app:layout_constraintTop_toBottomOf="@+id/txt_book_name"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/book_descrip"
-        android:layout_width="128dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/description"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/book_price"
-        android:textColor="@color/black"/>
+        app:layout_constraintTop_toBottomOf="@+id/txt_book_name" />
 
     <TextView
         android:id="@+id/txt_descrip"
-        android:layout_width="187dp"
-        android:layout_height="174dp"
+        android:layout_width="128dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/description"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_price" />
+
+    <EditText
+        android:id="@+id/book_descrip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="84dp"
+        android:layout_below="@+id/txt_descrip"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
         android:text="@string/book_description"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/book_name"
-        app:layout_constraintTop_toBottomOf="@+id/txt_price"
-        android:textColor="@color/black"/>
+        app:layout_constraintTop_toBottomOf="@+id/txt_price" />
 
     <Button
         android:id="@+id/btn_buyNow"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="100dp"
         android:text="@string/button_buy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_descrip" />
@@ -122,9 +123,9 @@
         android:id="@+id/btb_cart"
         android:layout_width="136dp"
         android:layout_height="49dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:text="@string/button_cart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_descrip" />

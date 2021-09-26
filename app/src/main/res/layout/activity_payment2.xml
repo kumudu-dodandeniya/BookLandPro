@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashbord"
+    android:orientation="vertical"
+    tools:context=".Payment2">
+
+    <Button
+        android:id="@+id/cardpayment"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:hint="@string/cardpayment"
+        android:textColorHint="#6A000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:backgroundTint="#009688" />
+
+    <Button
+        android:id="@+id/cashondelivery"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:hint="@string/cashondelivery"
+        android:textColor="#F44336"
+        android:textColorHint="#6A000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:backgroundTint="#009688" />
+</LinearLayout>

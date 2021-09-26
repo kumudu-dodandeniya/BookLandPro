@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashbord"
+    android:orientation="vertical"
+    tools:context=".Ordersuccess">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="100dp"
+        app:srcCompat="@drawable/success" />
+
+    <TextView
+        android:id="@+id/successfull"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:text="Thank you for your purchase !"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:hint="@string/finish"
+        android:text="Your order was completed successfully"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Continue"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:backgroundTint="#009688" />
+
+</LinearLayout>

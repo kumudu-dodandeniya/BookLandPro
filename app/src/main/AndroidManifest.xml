@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mobileapp">
 
     <application
@@ -9,18 +10,47 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileApp">
+
+
+
         <activity android:name=".Edit_book"></activity>
         <activity android:name=".Add_Book" />
         <activity android:name=".View_Books" />
         <activity android:name=".BookView" />
         <activity android:name=".Home" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+
+        <activity
+            android:name=".SavedCards"
+            android:exported="true" />
+        <activity
+            android:name=".Cashondelivery"
+            android:exported="true" />
+        <activity
+            android:name=".Ordersuccess"
+            android:exported="true" />
+        <activity
+            android:name=".CardDetails"
+            android:exported="true" />
+        <activity
+            android:name=".Payment2"
+            android:exported="true" />
+        <activity
+            android:name=".proccedtopay"
+            android:exported="true"/>
+
+        <activity
+            android:name=".cardCRUD"
+            android:exported="true" />
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+
+
     </application>
 
 </manifest>

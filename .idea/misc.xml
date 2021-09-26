@@ -7,10 +7,17 @@
         <entry key="..\:/Users/THEVINDU/AndroidStudioProjects/BookLandPro/app/src/main/res/layout/activity_add_book.xml" value="0.371875" />
         <entry key="..\:/Users/THEVINDU/AndroidStudioProjects/BookLandPro/app/src/main/res/layout/activity_book_view.xml" value="0.371875" />
         <entry key="..\:/Users/THEVINDU/AndroidStudioProjects/BookLandPro/app/src/main/res/layout/activity_card_crud.xml" value="0.371875" />
+        <entry key="..\:/Users/THEVINDU/AndroidStudioProjects/BookLandPro/app/src/main/res/layout/activity_card_details.xml" value="0.18691588785046728" />
+        <entry key="..\:/Users/THEVINDU/AndroidStudioProjects/BookLandPro/app/src/main/res/layout/activity_cashondelivery.xml" value="0.1" />
         <entry key="..\:/Users/THEVINDU/AndroidStudioProjects/BookLandPro/app/src/main/res/layout/activity_edit_book.xml" value="0.371875" />
         <entry key="..\:/Users/THEVINDU/AndroidStudioProjects/BookLandPro/app/src/main/res/layout/activity_home.xml" value="0.371875" />
         <entry key="..\:/Users/THEVINDU/AndroidStudioProjects/BookLandPro/app/src/main/res/layout/activity_main.xml" value="0.371875" />
+        <entry key="..\:/Users/THEVINDU/AndroidStudioProjects/BookLandPro/app/src/main/res/layout/activity_ordersuccess.xml" value="0.1" />
+        <entry key="..\:/Users/THEVINDU/AndroidStudioProjects/BookLandPro/app/src/main/res/layout/activity_payment2.xml" value="0.15" />
+        <entry key="..\:/Users/THEVINDU/AndroidStudioProjects/BookLandPro/app/src/main/res/layout/activity_saved_cards.xml" value="0.25" />
         <entry key="..\:/Users/THEVINDU/AndroidStudioProjects/BookLandPro/app/src/main/res/layout/activity_view_books.xml" value="0.371875" />
+        <entry key="..\:/Users/THEVINDU/AndroidStudioProjects/BookLandPro/app/src/main/res/layout/proccedtopay.xml" value="0.19844357976653695" />
+        <entry key="..\:/Users/THEVINDU/AndroidStudioProjects/BookLandPro/app/src/main/res/layout/update_dialog.xml" value="0.1608832807570978" />
       </map>
     </option>
   </component>

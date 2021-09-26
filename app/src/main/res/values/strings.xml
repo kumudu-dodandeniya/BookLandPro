@@ -64,5 +64,60 @@
         <item>BIOGRAPHY</item>
 
     </string-array>
+
+
+
+
+
+
+
+
+
+
+    <string name="entername">Shehan Gunawardana</string>
+    <string name="mobilenumber">Mobile Number</string>
+    <string name="Custermernumber">+94779814634</string>
+    <string name="district">District</string>
+    <string name="customerdistrict">Gampaha</string>
+    <string name="city">City</string>
+    <string name="address">Address</string>
+    <string name="customeraddress">112/2,Yakkala,Gampaha</string>
+    <string name="fullname">Full Name</string>
+    <string name="cuscity">Gampaha</string>
+    <string name="CustemCity">Gampaha</string>
+    <string name="proceedtopay">proceed to pay</string>
+    <string name="cardpayment">Credit/Debit Card</string>
+    <string name="cashondelivery">Cash On Delivery</string>
+    <string name="cardnumber">Card number</string>
+    <string name="cardholdername">cardholder Name</string>
+    <string name="mandy">MM/YY</string>
+    <string name="cvv">CVV</string>
+    <string name="Saveandconfirm"><![CDATA[Save&Confirm]]></string>
+    <string name="nameoncard">Name on card</string>
+    <string name="finish" />
+    <string name="continue1">Continue</string>
+    <string name="continue2">Continue</string>
+    <string name="confirmorder">Confirm Order</string>
+    <string name="CustomerID">Customer ID</string>
+    <string name="cusid">IE*******</string>
+    <string name="cardnum">Card Number</string>
+    <string name="customercardnum">**** **** **** ****</string>
+    <string name="savedcards">Saved Cards</string>
+    <string name="Savedcardno">Card number</string>
+    <string name="savecardname">Name on card</string>
+    <string name="savedmandy">MM/YY</string>
+    <string name="Savedcvv">CVV</string>
+    <string name="updatecard">Update Card Details</string>
+    <string name="deletecard">Delete Card</string>
+    <string name="paysavedcard">Proceed to pay</string>
+    <string name="mysavedcards">Saved Cards</string>
+    <string name="textname1">textname1</string>
+    <string-array name="cusCity">
+        <item>Gampaha</item>
+        <item>Colombo</item>
+        <item>Galle</item>
+        <item>Mathara</item>
+        <item>Rathnapura</item>
+    </string-array>
 </resources>
 

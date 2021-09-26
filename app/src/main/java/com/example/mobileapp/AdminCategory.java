@@ -19,7 +19,7 @@ public class AdminCategory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_category);
 
-        translation = (ImageView) findViewById(R.id.translation);
+        translation = (ImageView) findViewById(R.id.novels);
         novel = (ImageView) findViewById(R.id.navel);
         children = (ImageView) findViewById(R.id.children);
         education = (ImageView) findViewById(R.id.education);

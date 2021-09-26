@@ -125,7 +125,7 @@ public class UserLogin extends AppCompatActivity {
                                 Toast.makeText(UserLogin.this, "Welcome Admin, you are logged in Successfully", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
-                                Intent intent = new Intent(UserLogin.this,HomeActivity.class);
+                                Intent intent = new Intent(UserLogin.this,AdminCategory.class);
                                 startActivity(intent);
                             }
                             else if(parentDbname.equals("Users")){
@@ -133,6 +133,7 @@ public class UserLogin extends AppCompatActivity {
                                 loadingBar.dismiss();
 
                                 Intent intent = new Intent(UserLogin.this,HomeActivity.class);
+                                Prevalent.currentOnlineUser = usersData;
                                 startActivity(intent);
                             }
                         }

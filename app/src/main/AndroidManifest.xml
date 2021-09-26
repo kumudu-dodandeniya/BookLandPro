@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileApp">
-        <activity android:name=".HomeActivity"></activity>
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.MobileApp.NoActionBar"></activity>
+        <activity android:name=".ConfirmFinalOrderActivity" />
+        <activity android:name=".CartActivity" />
         <activity android:name=".UserLogin" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".Main_page">
@@ -25,9 +30,7 @@
         <activity android:name=".View_Books" />
         <activity android:name=".BookView" />
         <activity android:name=".Home" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

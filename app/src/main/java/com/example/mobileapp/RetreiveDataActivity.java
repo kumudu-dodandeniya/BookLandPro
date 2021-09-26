@@ -112,11 +112,18 @@ public class RetreiveDataActivity extends AppCompatActivity {
     private void deleteRecord(String cardnumber){
         DatabaseReference DbRef =FirebaseDatabase.getInstance().getReference("CardDetails").child(cardnumber);
         Task<Void> mTask = DbRef.removeValue();
+
+
         mTask.addOnSuccessListener(new OnSuccessListener<Void>() {
+
+
             @Override
             public void onSuccess(Void aVoid) {
                 showToast("Deleted");
             }
+
+
+
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
@@ -124,6 +131,9 @@ public class RetreiveDataActivity extends AppCompatActivity {
             }
         });
     }
+
+
+
     private void updateDate(String cardnumber, String cardname, String mm_yy, String cvv){
         DatabaseReference DbRef =FirebaseDatabase.getInstance().getReference("CardDetails").child(cardnumber);
         Cards cards = new Cards( cardnumber, cardname, mm_yy, cvv);

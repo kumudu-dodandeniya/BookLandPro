@@ -76,19 +76,24 @@ public class RetreiveDataActivity extends AppCompatActivity {
         LayoutInflater inflater = getLayoutInflater();
         View mDialogView = inflater.inflate(R.layout.update_dialog, null);
         mDialog.setView(mDialogView);
+
         EditText update_cardnumber = mDialogView.findViewById(R.id.update_cardnumber);
         EditText update_nameoncard = mDialogView.findViewById(R.id.update_nameoncard);
         EditText update_expire_date = mDialogView.findViewById(R.id.update_expire_date);
         EditText update_cvv = mDialogView.findViewById(R.id.update_cvv);
+
         Button btnUpdate = mDialogView.findViewById(R.id.btnUpdate);
         Button btnDelete = mDialogView.findViewById(R.id.btnDelete);
 
+
         mDialog.setTitle("Updating" +cardnumber+ "record");
+
         mDialog.show();
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 
                 String cardnumber= update_cardnumber.getText().toString();
                 String mm_yy= update_expire_date.getText().toString();
@@ -98,12 +103,17 @@ public class RetreiveDataActivity extends AppCompatActivity {
 
                 Toast.makeText(RetreiveDataActivity.this, "Record Update", Toast.LENGTH_SHORT).show();
             }
+
+
         });
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 deleteRecord(cardnumber);
             }
+
+
+
         });
     }
     private void showToast(String message){
